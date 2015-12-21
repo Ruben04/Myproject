@@ -22,6 +22,7 @@
 		{% if lista_jugadores %}
 			<table border="2">
 				<tr>
+					<img src="/{{equipo.foto}}">
 					<td>Nombre</td>
 					<td>Equipo</td>
 					<td>Nacimiento</td>

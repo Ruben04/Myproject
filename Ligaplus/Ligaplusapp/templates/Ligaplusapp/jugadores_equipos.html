@@ -22,6 +22,7 @@
 		{% if lista_jugadores %}
 			<table border="2">
 				<tr>
+					<img src="/{{equipo.foto}}">
 					<td>Nombre</td>
 					<td>Equipo</td>
 					<td>Nacimiento</td>
@@ -37,7 +38,6 @@
 		{% else %}
 			<p>No hay jugadores</p>			
 		{% endif %}
-		<img src="/{{equipo.foto}}">
 <a href="{% url 'indice' %}">Volver</a> 
 	</body>
 </html>
