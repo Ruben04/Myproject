@@ -1,0 +1,21 @@
+from django.db import models
+
+# Create your models here.
+
+class Equipos(models.Model):
+	Nombre = models.CharField(max_length=30)
+	Lugar  = models.TextField()
+	Creacion = models.DateTimeField()
+	foto = models.ImageField(upload_to='Ligaplusapp/static/media',null=True)
+
+	def __str__(self):
+		return '%s' % (self.Nombre)
+
+class Jugadores(models.Model):
+	Nombre = models.CharField(max_length=30)
+	Equipo = models.ForeignKey(Equipos)
+	Nacimiento = models.DateTimeField()
+	foto = models.ImageField(upload_to='Ligaplusapp/static/media',null=True)
+
+	def __str__(self):
+		return '%s' % (self.Nombre)
